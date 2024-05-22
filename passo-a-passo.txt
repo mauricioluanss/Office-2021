@@ -1,0 +1,75 @@
+Pacote Office 2021 com ativação de licença (kms)
+
+
+INSTALAÇÃO
+
+
+1 - Para realizar a instalação é necessário baixar o diretório "MS Office Setup" para o seu pc.
+
+2 - Depois de baixar o diretório mencionado, recorte e cole ele na raíz do sistema (C:\)
+
+3 - Abra o CMD como admin e vá até o caminho do diretório utilizando o seguinte comando:
+	
+	cd "C:\MS Office Setup"
+
+4 - Estando dentro do diretório execute o comando de instalação do software:
+
+	setup.exe /configure Configuração.xml
+
+	*A instalação vai começar. A partir disso, feche o CMD e aguarde até que a instalação conclua.
+	*Apareçerá uma mensagem informando que terminou.
+
+5 - Quando terminar, será necessário ativar a licença. Siga os passos abaixo.
+
+----------------------------------------------------------------------------------------------------------------------
+
+ATIVAÇÃO DA LICENÇA
+
+1 -  Abra o CMD como admin e execute o seguinte comando: 
+
+	cd "C:\ProgramFiles\Microsoft Office\Office16"
+
+2 - Execute o seguinte comando para iniciar o ativador kms:
+	
+	for /f %x in ('dir /b ..\root\Licenses16\proplusvl_kms*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
+
+	*Aguarde o processo terminar, só então siga para o próximo passo.
+
+3 - Execute a lista de comandos abaixo. (COPIE E COLE TODOS DE UMA VEZ SÓ):
+
+	cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+	cscript ospp.vbs /unpkey:BTDRB >nul
+	cscript ospp.vbs /unpkey:KHGM9 >nul
+	cscript ospp.vbs /unpkey:CPQVG >nul
+	cscript ospp.vbs /sethst:kms8.msguides.com
+	cscript ospp.vbs /setprt:1688
+	cscript ospp.vbs /act
+
+	*Os comandos serão executados um a um automaticamente. No final da execução, o prompt deixará digitado na linha de comando "cscript ospp.vbs /act".
+	apenas pressione "Enter" e aguarde finalizar.
+
+4 - Após a execução de todos os comandos, deverá aparecer a mensagem de ativação no final ("Activation successfull" ou algo parecido). Abra algum
+aplicativo do Office e veja se ativou a licença.
+	
+*Se a mensagem de licença ativada não aparecer, ou dê algum erro na ativação, repita todo o item 3 (copie novamente os comandos de ativação e cole no terminal).
+faça esse processo até que a mensagem de sucesso apareça.
+
+
+22/05/2024
+mauricioluanss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
